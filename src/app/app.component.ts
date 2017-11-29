@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     firebase.initializeApp({
-      apiKey: 'YourAPIKey',
+      apiKey: 'YourAPIKEy',
       authDomain: 'YourAuthDomain'
     });
   }
