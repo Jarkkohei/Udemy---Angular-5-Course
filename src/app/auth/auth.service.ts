@@ -25,6 +25,11 @@ export class AuthService {
         );
     }
 
+    logout() {
+      firebase.auth().signOut();
+      this.token = null;
+    }
+
     /*  Deprecated getToken() method.
     getToken() {
       firebase.auth().currentUser.getToken()
