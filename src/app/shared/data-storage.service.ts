@@ -1,9 +1,7 @@
-import { Recipe } from './../recipes/recipe.model';
 import 'rxjs/Rx';
 import { Http, Response } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { RecipeService } from '../recipes/recipe.service';
-import { Response } from '@angular/http/src/static_response';
 import { Recipe } from '../recipes/recipe.model';
 
 @Injectable()
