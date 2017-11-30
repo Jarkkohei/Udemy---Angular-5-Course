@@ -1,3 +1,4 @@
+import { SharedModule } from './shared/shared.module';
 import { RecipesModule } from './recipes/recipes.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -18,15 +19,12 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 
-import { DropdownDirective } from './shared/dropdown.directive';
-
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    DropdownDirective,
     SignupComponent,
     SigninComponent
   ],
@@ -35,7 +33,8 @@ import { DropdownDirective } from './shared/dropdown.directive';
     FormsModule,
     AppRoutingModule,
     HttpModule,
-    RecipesModule
+    RecipesModule,
+    SharedModule
   ],
   providers: [ShoppingListService, RecipeService, DataStorageService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
