@@ -5,16 +5,18 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './auth/auth-guard.service';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 
+import { PreloadAllModules } from '@angular/router';
+
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'recipes', loadChildren: './recipes/recipes.module#RecipesModule', canActivate: [AuthGuard] },
+  { path: 'recipes', loadChildren: './recipes/recipes.module#RecipesModule' },
   { path: 'shopping-list', component: ShoppingListComponent }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes, {preloadingStrategy: PreloadAllModules})
   ],
   exports: [RouterModule]
 })
